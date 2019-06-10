@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="{% static 'js/vue.js' %}" charset="utf-8"></script>
+    <script src="{% static 'js/reqwest.js' %}" charset="utf-8"></script>
+    <title>Document</title>
+</head>
+<body>
+    {% verbatim %} 
+    <div id="index">
+        <div v-for='item in labstudent'>
+            {{ item.student_name }}
+            {{ item.student_major }}
+        </div>
+        <h1>软件工程实验室接口网站</h1>
+    </div>
+    {% endverbatim %} 
+    <script src="{% static "js/index.js" %}" charset="utf-8"></script>
+</body>
+</html>
